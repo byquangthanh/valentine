@@ -7,13 +7,13 @@ body {
 }
 
 img {
-  height: 400px;
+  height: auto;
   width: auto;
-  padding: 10px;
+  padding: 5px;
 }
 
 #valentineQuestion {
-  font-size: 50px;
+  font-size: 23.9px;
   margin-bottom: 10px;
 }
 .answerButton {

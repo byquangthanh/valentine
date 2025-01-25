@@ -6,11 +6,13 @@ body {
   color: #ff9494;
 }
 #thankyou {
-  font-size: 50px;
+  font-size: 37px;
   margin-bottom: 20px;
 }
 .rizz {
   margin-bottom: 10 px;
+  height: 40px;
+  width:40px;
 }
 .button {
   padding: 10px 20px;
