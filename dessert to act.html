@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Activities</title>
+    <link rel="stylesheet" href="css/activities.css" />
+  </head>
+  <body>
+    <div id="activityquestion"><b>What are we doing after?</b></div>
+    <div class="activities-selection">
+      <!-- Only one choice between Park and Arcade, so use radio buttons for this group -->
+      <div class="activity-item">
+        <img src="activities/park.jpeg" alt="park" />
+        <label>
+          <input
+            type="radio"
+            name="activity"
+            value="park"
+          />
+          Park
+        </label>
+      </div>
+      
+      <div class="activity-item">
+        <img src="activities/arcade.jpeg" alt="arcade" />
+        <label>
+          <input
+            type="radio"
+            name="activity"
+            value="arcade"
+          />
+          Arcade
+        </label>
+      </div>
+
+      <!-- The rest of the activities can remain as checkboxes, if needed -->
+      <div class="activity-item">
+        <img src="activities/aquarium.jpeg" alt="aquarium" />
+        <label>
+          <input
+            type="checkbox"
+            name="activities"
+            value="aquarium"
+          />
+          Aquarium
+        </label>
+      </div>
+      <div class="activity-item">
+        <img src="activities/cinema.jpeg" alt="cinema" />
+        <label>
+          <input
+            type="checkbox"
+            name="activities"
+            value="cinema"
+          />
+          Cinema
+        </label>
+      </div>
+      <div class="activity-item">
+        <img src="activities/keramika.jpeg" alt="ceramics" />
+        <label>
+          <input
+            type="checkbox"
+            name="activities"
+            value="ceramics"
+          />
+          Ceramics
+        </label>
+      </div>
+      <div class="activity-item">
+        <img src="activities/kunsthalle.jpeg" alt="kunsthalle" />
+        <label>
+          <input
+            type="checkbox"
+            name="activities"
+            value="kunsthalle"
+          />
+          Exhibition
+        </label>
+      </div>
+    </div>
+    <button class="button" onclick="location.href='lastpage.html'">
+      Last page
+    </button>
+  </body>
+</html>
