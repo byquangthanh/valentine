@@ -7,71 +7,61 @@
     <link rel="stylesheet" href="css/activities.css" />
   </head>
   <body>
-    <div id="activityquestion"><b>What are we doing after?</b></div>
+    <div id="activityquestion"><b>What we doin after?</b></div>
     <div class="activities-selection">
       <div class="activity-item">
-        <img src="activities/aquarium.jpeg" alt="aquarium" />
-        <label
-          ><input
-            type="checkbox"
-            name="activities"
-            value="aquarium"
-          />aquarium</label
-        >
+        <img src="activities/doomscroll.jpg" alt="Doom Scroll" />
+        <label>
+          <input type="checkbox" name="activities" value="Doom Scroll" onclick="playDoomScrollSound()" /> Doom Scroll 😒
+        </label>
       </div>
       <div class="activity-item">
-        <img src="activities/arcade.jpeg" alt="arcade" />
-        <label
-          ><input
-            type="checkbox"
-            name="activities"
-            value="arcade"
-          />arcade</label
-        >
+        <img src="activities/arcade.jpg" alt="arcade" />
+        <label>
+          <input type="checkbox" name="activities" value="Arcade/Games" onclick="playSound()" /> Arcade/Games
+        </label>
       </div>
       <div class="activity-item">
-        <img src="activities/cinema.jpeg" alt="cinema" />
-        <label
-          ><input
-            type="checkbox"
-            name="activities"
-            value="cinema"
-          />cinema</label
-        >
+        <img src="activities/cinema.jpg" alt="movie night" />
+        <label>
+          <input type="checkbox" name="activities" value="Movie Night" onclick="playSound()" /> Movie Night
+        </label>
       </div>
       <div class="activity-item">
-        <img src="activities/keramika.jpeg" alt="ceramics" />
-        <label
-          ><input
-            type="checkbox"
-            name="activities"
-            value="ceramics"
-          />ceramics</label
-        >
+        <img src="activities/kisses.gif" alt="Kisses" />
+        <label>
+          <input type="checkbox" name="activities" value="Kisses" onclick="playSound()" /> Kisses
+        </label>
       </div>
       <div class="activity-item">
         <img src="activities/kunsthalle.jpeg" alt="kunsthalle" />
-        <label
-          ><input
-            type="checkbox"
-            name="activities"
-            value="kunsthalle"
-          />exhibition</label
-        >
+        <label>
+          <input type="checkbox" name="activities" value="Kunsthalle" onclick="playSound()" /> Exhibition
+        </label>
       </div>
       <div class="activity-item">
-        <img src="activities/park.jpeg" alt="park.jpeg" />
-        <label
-          ><input
-            type="checkbox"
-            name="activities"
-            value="park.jpeg"
-          />park</label
-        >
+        <img src="activities/park.jpeg" alt="walk in the park" />
+        <label>
+          <input type="checkbox" name="activities" value="Walk in Da Park" onclick="playSound()" /> Walk in Da Park
+        </label>
       </div>
     </div>
     <button class="button" onclick="location.href='lastpage.html'">
       Last page
     </button>
+
+    <script>
+      // Function to play the same sound for all activities except Doom Scroll
+      function playSound() {
+        var sound = new Audio('sounds/activity.mp3'); // Replace with your sound file
+        sound.play();
+      }
+
+      // Function to play a separate sound for Doom Scroll
+      function playDoomScrollSound() {
+        var doomScrollSound = new Audio('sounds/doomscroll.mp3'); // Replace with Doom Scroll specific sound file
+        doomScrollSound.play();
+      }
+    </script>
   </body>
 </html>
