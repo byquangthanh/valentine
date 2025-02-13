@@ -13,15 +13,13 @@
     </button>
     <button class="answerButton" id="noButton">ew no 😖</button>
     <br />
-    <img src="dawg.gif" alt="dawg asking question" class="responsive" id="gifClick" />
-
-    <audio id="bgSound" src="dogdoing.mp3"></audio>
+    <img src="dawg.gif" alt="dawg asking question" class="responsive" onclick="playDogSound()" />
 
     <script>
-      document.getElementById("gifClick").addEventListener("click", function () {
-        var audio = document.getElementById("bgSound");
-        audio.play().catch(error => console.log("Playback error:", error));
-      });
+      function playDogSound() {
+        var sound = new Audio('dogdoing.mp3'); // Ensure the file is in the correct path
+        sound.play();
+      }
 
       document.getElementById("noButton").addEventListener("click", function () {
         var yesButton = document.querySelector(
