@@ -13,15 +13,14 @@
     </button>
     <button class="answerButton" id="noButton">ew no 😖</button>
     <br />
-    <img src="dawg.gif" alt="dawg asking question" class="responsive" />
+    <img src="dawg.gif" alt="dawg asking question" class="responsive" id="gifClick" />
 
     <audio id="bgSound" src="dogdoing.mp3"></audio>
 
     <script>
-      // Play sound as soon as the page loads
-      window.addEventListener("load", function () {
+      document.getElementById("gifClick").addEventListener("click", function () {
         var audio = document.getElementById("bgSound");
-        audio.play().catch(error => console.log("Autoplay blocked:", error));
+        audio.play().catch(error => console.log("Playback error:", error));
       });
 
       document.getElementById("noButton").addEventListener("click", function () {
