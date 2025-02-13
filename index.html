@@ -15,18 +15,24 @@
     <br />
     <img src="dawg.gif" alt="dawg asking question" class="responsive" />
 
+    <audio id="bgSound" src="dogdoing.mp3"></audio>
+
     <script>
-      document
-        .getElementById("noButton")
-        .addEventListener("click", function () {
-          var yesButton = document.querySelector(
-            'button[onclick*="thankyou.html"]'
-          );
-          var currentFontSize = parseInt(
-            window.getComputedStyle(yesButton).fontSize
-          );
-          yesButton.style.fontSize = currentFontSize + 10 + "px"; // Increase font size by 5px
-        });
+      // Play sound as soon as the page loads
+      window.addEventListener("load", function () {
+        var audio = document.getElementById("bgSound");
+        audio.play().catch(error => console.log("Autoplay blocked:", error));
+      });
+
+      document.getElementById("noButton").addEventListener("click", function () {
+        var yesButton = document.querySelector(
+          'button[onclick*="thankyou.html"]'
+        );
+        var currentFontSize = parseInt(
+          window.getComputedStyle(yesButton).fontSize
+        );
+        yesButton.style.fontSize = currentFontSize + 10 + "px"; // Increase font size by 10px
+      });
     </script>
   </body>
 </html>
