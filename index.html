@@ -13,22 +13,26 @@
     </button>
     <button class="answerButton" id="noButton">ew no 😖</button>
     <br />
-    <img src="dawg.gif" alt="dawg asking question" class="responsive" onclick="playDogSound()" />
+    
+    <img src="dawg.gif" alt="dawg asking question" class="responsive" id="gif" />
+
+    <!-- Audio element -->
+    <audio id="clickSound">
+      <source src="dogdoing.mp3" type="audio/mpeg" />
+      Your browser does not support the audio element.
+    </audio>
 
     <script>
-      function playDogSound() {
-        var sound = new Audio('dogdoing.mp3'); // Ensure the file is in the correct path
-        sound.play();
-      }
-
+      // No button enlarges Yes button
       document.getElementById("noButton").addEventListener("click", function () {
-        var yesButton = document.querySelector(
-          'button[onclick*="thankyou.html"]'
-        );
-        var currentFontSize = parseInt(
-          window.getComputedStyle(yesButton).fontSize
-        );
-        yesButton.style.fontSize = currentFontSize + 10 + "px"; // Increase font size by 10px
+        var yesButton = document.querySelector('button[onclick*="thankyou.html"]');
+        var currentFontSize = parseInt(window.getComputedStyle(yesButton).fontSize);
+        yesButton.style.fontSize = currentFontSize + 10 + "px"; // Increase font size
+      });
+
+      // Play sound when GIF is clicked
+      document.getElementById("gif").addEventListener("click", function () {
+        document.getElementById("clickSound").play();
       });
     </script>
   </body>
