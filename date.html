@@ -4,18 +4,61 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Date</title>
-    <link rel="stylesheet" href="css/date.css" />
+    <link rel="stylesheet" href="css/valentine.css" />
+    <style>
+      /* Style for the 'Got it?!?' label to make it big and bold */
+      label {
+        font-size: 60px; /* Larger font size */
+        font-weight: bold; /* Make it bold */
+        display: block; /* Ensure it takes up its own line */
+        margin-bottom: 20px; /* Add some space below the label */
+      }
+
+      .answerButton {
+        font-size: 16px; /* Default size */
+        transition: font-size 0.2s ease-in-out; /* Smooth transition */
+      }
+
+      /* Style for the video */
+      #videoContainer {
+        text-align: center;
+        margin-top: 30px;
+      }
+
+      .responsive-video {
+        max-width: 100%;
+        height: auto;
+      }
+    </style>
   </head>
   <body>
-    <h1 title="choose a date">Are you free on ...</h1>
+    <h1 title="choose a date">You better be free on 14-16th February... 🫵(◉ _ ◉) </h1>
     <form class="form-group">
-      <label>Which day: (select a date)</label>
+      <label>GOT IT?!?</label>
       <div>
-        <input type="date" />
-        <button class="button" type="submit" formaction="food.html">
-          Submit
-        </button>
+        <button type="button" class="answerButton" id="yesButton">Yes!!!😡</button>
+        <button type="button" class="answerButton" id="noButton">Pleaseee nooooo!!! 😭</button>
       </div>
     </form>
+
+    <!-- Video container -->
+    <div id="videoContainer">
+      <video class="responsive-video" controls>
+        <source src="scary-meme.mp4" type="video/mp4" />
+        Your browser does not support the video tag.
+      </video>
+    </div>
+
+    <script>
+      document.getElementById("noButton").addEventListener("click", function () {
+        var yesButton = document.getElementById("yesButton");
+        var currentFontSize = parseInt(window.getComputedStyle(yesButton).fontSize);
+        yesButton.style.fontSize = (currentFontSize + 10) + "px"; // Increase font size by 10px
+      });
+
+      document.getElementById("yesButton").addEventListener("click", function () {
+        window.location.href = "food.html"; // Redirect to food.html
+      });
+    </script>
   </body>
 </html>

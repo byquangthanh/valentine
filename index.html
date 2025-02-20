@@ -5,28 +5,52 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Be My Valentine</title>
     <link rel="stylesheet" href="css/valentine.css" />
+    <style>
+      #gifButton {
+        background: none;
+        border: none;
+        padding: 0;
+        cursor: pointer;
+        display: inline-flex; /* Prevents shrinking */
+      }
+      #gif {
+        width: auto; /* Ensures original size */
+        height: auto; /* Keeps aspect ratio */
+        max-width: 100%; /* Prevents overflow on small screens */
+      }
+    </style>
   </head>
   <body>
     <div id="valentineQuestion"><b>Will you be my valentine?</b></div>
     <button class="answerButton" onclick="location.href='thankyou.html'">
-      Yes
+      Okiii hehe 🤭
     </button>
-    <button class="answerButton" id="noButton">I no no wanna o(╥﹏╥)o</button>
+    <button class="answerButton" id="noButton">ew no 😖</button>
     <br />
-    <img src="cat.gif" alt="cat asking question" class="responsive" />
+
+    <!-- GIF as a button -->
+    <button id="gifButton">
+      <img src="dawg.gif" alt="dawg asking question" class="responsive" id="gif" />
+    </button>
+
+    <!-- Audio element -->
+    <audio id="clickSound">
+      <source src="sounds/dogdoing.mp3" type="audio/mpeg" />
+      Your browser does not support the audio element.
+    </audio>
 
     <script>
-      document
-        .getElementById("noButton")
-        .addEventListener("click", function () {
-          var yesButton = document.querySelector(
-            'button[onclick*="thankyou.html"]'
-          );
-          var currentFontSize = parseInt(
-            window.getComputedStyle(yesButton).fontSize
-          );
-          yesButton.style.fontSize = currentFontSize + 10 + "px"; // Increase font size by 5px
-        });
+      // No button enlarges Yes button
+      document.getElementById("noButton").addEventListener("click", function () {
+        var yesButton = document.querySelector('button[onclick*="thankyou.html"]');
+        var currentFontSize = parseInt(window.getComputedStyle(yesButton).fontSize);
+        yesButton.style.fontSize = currentFontSize + 10 + "px"; // Increase font size
+      });
+
+      // Play sound when GIF button is clicked
+      document.getElementById("gifButton").addEventListener("click", function () {
+        document.getElementById("clickSound").play();
+      });
     </script>
   </body>
 </html>

@@ -11,44 +11,66 @@
 
     <div class="dessert-selection">
       <div class="dessert-item">
-        <img src="food/boba.jpeg" alt="boba" />
-        <label
-          ><input type="checkbox" name="dessert" value="boba" /> boba</label
-        >
+        <img src="food/boba.jpeg" alt="Boba" />
+        <label>
+          <input type="checkbox" name="dessert" value="Boba" onclick="playSound()" /> Boba
+        </label>
       </div>
       <div class="dessert-item">
-        <img src="food/churro.jpeg" alt="churro" />
-        <label
-          ><input type="checkbox" name="dessert" value="churro" /> churro</label
-        >
+        <img src="food/churro.jpeg" alt="Churro" />
+        <label>
+          <input type="checkbox" name="dessert" value="Churro" onclick="playSound()" /> Churro
+        </label>
       </div>
       <div class="dessert-item">
-        <img src="food/che.jpeg" alt="che" />
-        <label><input type="checkbox" name="dessert" value="che" /> che</label>
+        <img src="food/mochi.jpeg" alt="Mochi" />
+        <label>
+          <input type="checkbox" name="dessert" value="Mochi" onclick="playSound()" /> Mochi
+        </label>
       </div>
       <div class="dessert-item">
-        <img src="food/mochi.jpeg" alt="mochi" />
-        <label
-          ><input type="checkbox" name="dessert" value="mochi" /> mochi</label
-        >
+        <img src="food/pancakes.jpg" alt="Pancakes" />
+        <label>
+          <input type="checkbox" name="dessert" value="Pancakes" onclick="playSound()" /> Pancakes
+        </label>
       </div>
       <div class="dessert-item">
-        <img src="food/randombun.jpeg" alt="randombun" />
-        <label
-          ><input type="checkbox" name="dessert" value="randombun" /> random
-          bun</label
-        >
+        <img src="food/cookies.jpg" alt="Cookies" />
+        <label>
+          <input type="checkbox" name="dessert" value="Cookies" onclick="playSound()" /> Cookies
+        </label>
       </div>
       <div class="dessert-item">
-        <img src="food/taiyaki.jpeg" alt="taiyaki" />
-        <label
-          ><input type="checkbox" name="dessert" value="taiyaki" />
-          taiyaki</label
-        >
+        <img src="food/croissant.jpg" alt="Croissant" />
+        <label>
+          <input type="checkbox" name="dessert" value="Croissant" onclick="playSound()" /> Croissant
+        </label>
+      </div>
+      <div class="dessert-item">
+        <img src="food/macarons.jpg" alt="Macarons" />
+        <label>
+          <input type="checkbox" name="dessert" value="Macarons" onclick="playSound()" /> Macarons
+        </label>
+      </div>
+      <div class="dessert-item">
+        <img src="food/ice cream.jpg" alt="Ice Cream That's Bussss" />
+        <label>
+          <input type="checkbox" name="dessert" value="Ice Cream That's Bussss" onclick="playSound()" /> 
+          Ice Cream That's Bussss
+        </label>
       </div>
     </div>
+    
     <button class="button" onclick="location.href='activities.html'">
       Continue UWU
     </button>
+
+    <script>
+      // Function to play the same sound for all dessert selections
+      function playSound() {
+        var sound = new Audio('sounds/dessert.mp3'); // Replace with your sound file
+        sound.play();
+      }
+    </script>
   </body>
 </html>
